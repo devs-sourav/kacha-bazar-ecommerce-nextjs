@@ -5,7 +5,7 @@ import data from '../../data/data.json';
 
 export default function CustomDataTable() {
     const PAGE_SIZE = 10;
-    const [currentPage, setCurrentPage] = useState(10); 
+    const [currentPage, setCurrentPage] = useState(1); 
     const startIndex = (currentPage - 1)*PAGE_SIZE
     const endIndex = startIndex + PAGE_SIZE
     // Create a copy of the data array
