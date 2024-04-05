@@ -8,25 +8,29 @@ export default function SmallCards() {
         {
             title:'Today Orders',
             sales:'100',
-            iconBg:'bg-yellow-600',
+            iconBg:'bg-orange-300 ',
+            iconColor:'text-orange-600',
             icon:ShoppingCart
         },
         {
             title:'Orders Pending',
             sales:'90',
-            iconBg:'bg-orange-600',
+            iconBg:'bg-purple-300 ',
+            iconColor:'text-purple-600',
             icon: RefreshCw
         },
         {
             title:'Order Processing',
             sales:'200',
-            iconBg:'bg-blue-600',
+            iconBg:'bg-blue-300 ',
+            iconColor:'text-blue-600',
             icon:Truck
         },
         {
             title:'Orders Delivered',
             sales:'300',
-            iconBg:'bg-green-600',
+            iconBg:'bg-green-300 ',
+            iconColor:'text-green-600',
             icon:Check
         },
     ]
