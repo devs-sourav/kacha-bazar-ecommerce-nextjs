@@ -17,7 +17,7 @@ import ThemeSwitcherBtn from './ThemeSwitcherBtn'
 export default function Navbar() {
   return (
     <nav className='flex items-center z-20 justify-between bg-slate-50 dark:bg-slate-800 text-slate-50 h-16 px-8 py-4 fixed left-0 top-0 w-full shadow-lg'>
-        <button className='pl-[240px]'><AlignJustify className='text-green-600'/></button>
+        <button className='pl-64'><AlignJustify className='text-green-600'/></button>
         <div className="flex space-x-3 relative">
             {/* <button><Sun className='text-green-600 '/>
             </button> */}
@@ -50,7 +50,7 @@ export default function Navbar() {
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
-                    <div className='flex items-center space-x-3'>
+                    <div className='flex items-center space-x-4'>
                       <Image src="/profile.jpg" alt='User Profile' width={200} height={200} className='w-8 h-8 rounded-full'/>
                       <div className="flex flex-col space-y-1">
                         <p className='text-ellipsis whitespace-nowrap'>Yellow Sweet Corn Stock Out,</p>
