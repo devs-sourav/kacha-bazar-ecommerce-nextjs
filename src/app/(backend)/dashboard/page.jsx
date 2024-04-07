@@ -16,7 +16,7 @@ export default function page() {
       {/* Charts */}
       <DashboardChart/>
       {/* Recent */}
-      <CustomDataTable/>
+      {/* <CustomDataTable/> */}
     </div>
   )
 }

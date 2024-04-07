@@ -2,6 +2,8 @@
 import React from 'react'
 import { AlignJustify, Bell, LayoutDashboard, LogOut, Settings, Sun, User, X } from 'lucide-react'
 import Image from 'next/image'
+
+import Link from 'next/link'
 // import profile from '../../../public/profile.jpg'
 import {
   DropdownMenu,
@@ -14,10 +16,13 @@ import {
 import ThemeSwitcherBtn from './ThemeSwitcherBtn'
 
 
-export default function Navbar() {
+export default function Navbar({setShowSideBar,showSideBar}) {
   return (
-    <nav className='flex items-center z-20 justify-between bg-slate-50 dark:bg-slate-800 text-slate-50 h-16 px-8 py-4 fixed left-0 top-0 w-full shadow-lg'>
-        <button className='pl-64'><AlignJustify className='text-green-600'/></button>
+    <nav className='flex items-center z-20 justify-between bg-slate-50 dark:bg-slate-800 text-slate-50 h-20 px-8 py-4 fixed left-0 top-0 w-full shadow-lg'>
+        <button onClick={()=>setShowSideBar(!showSideBar)} className='lg:pl-64  '><AlignJustify   className='text-green-600'/>
+        
+        </button>
+        <Link className='sm:hidden' onClick={()=>setShowSideBar(false)} href='/dashboard'><Image className='w-24' src="/logo-light.png" width={100} height={100}/></Link>
         <div className="flex space-x-3 relative">
             {/* <button><Sun className='text-green-600 '/>
             </button> */}

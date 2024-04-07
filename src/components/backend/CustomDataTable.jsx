@@ -13,9 +13,7 @@ export default function CustomDataTable() {
     const currentlyDisplayedData = dataCopy.splice(startIndex, PAGE_SIZE);
     const totalPages = Math.ceil(dataCopy.length / PAGE_SIZE) 
 
-    function handlePageChange(page){
-        console.log(page)
-    }
+
 
     return (
         <div className='pb-8 mt-12 bg-slate-50 dark:bg-slate-700 pt-10 px-6 shadow-lg rounded-lg'>
