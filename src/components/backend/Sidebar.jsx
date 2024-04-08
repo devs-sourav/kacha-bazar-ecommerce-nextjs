@@ -2,7 +2,7 @@
 import React,{useState} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Minus,Slack, Users, LayoutDashboard, User, ExternalLink, Truck, Warehouse, SquareUser ,Settings,LogOut,ChevronDown,PartyPopper,NotebookPen,Layers2,SendToBack,Images,ChevronRight} from 'lucide-react'
+import { Minus,Slack, Users, LayoutDashboard, User, ExternalLink, Truck, Warehouse, SquareUser ,Settings,LogOut,ChevronDown,PartyPopper,NotebookPen,Layers2,SendToBack,Images,ChevronRight,Speech,CreditCard} from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import {
     Collapsible,
@@ -85,6 +85,16 @@ export default function Sidebar({showSideBar,setShowSideBar}) {
             href:"/dashboard/staff"
         },
         {
+            title:"Our Communinty",
+            icon:Speech ,
+            href:"/dashboard/community"
+        },
+        {
+            title:"Wallet",
+            icon:CreditCard,
+            href:"/dashboard/wallets"
+        },
+        {
             title:"Settings",
             icon:Settings,
             href:"/dashboard/settings"
@@ -99,14 +109,14 @@ export default function Sidebar({showSideBar,setShowSideBar}) {
 
 
     return (
-        <div className={showSideBar ? 'sm:block mt-20 sm:mt-0 shadow-lg z-50 bg-slate-50 dark:bg-slate-700 space-y-6 w-64 h-screen dark:text-slate-50 text-slate-800 fixed top-0 left-0': 'hidden sm:block shadow-lg z-50 bg-slate-50 dark:bg-slate-700 space-y-6 w-64 h-screen dark:text-slate-50 text-slate-800 fixed top-0 left-0'}>
+        <div className={showSideBar ? 'sm:block mt-20 sm:mt-0 shadow-lg z-50 bg-slate-50 dark:bg-slate-700 space-y-5 w-64 h-screen dark:text-slate-300 text-slate-800 fixed top-0 left-0 overflow-y-scroll': 'hidden sm:block shadow-lg z-50 bg-slate-50 dark:bg-slate-700 space-y-5 w-64 h-screen dark:text-slate-300 text-slate-800 fixed top-0 left-0 overflow-y-scroll'}>
             <div className='px-6 pt-6'>
                 <Link onClick={()=>setShowSideBar(false)} href="/dashboard">
                     <Image className='w-32' src='/logo-light.png' alt='Logo' width={200} height={200}/>
                 </Link>
             </div>
 
-            <div className="space-y-3 flex flex-col">
+            <div className="pt-9 pb-8 space-y-4 flex flex-col">
                 {
                 sideBarLinks.map((item, index) => {
                     const Icon = item.icon;
@@ -116,7 +126,7 @@ export default function Sidebar({showSideBar,setShowSideBar}) {
                         <React.Fragment key={index}>
                             {item?.submenu ?
                                 (
-                                    <div className='flex px-6 space-x-3  items-center dark:text-slate-50 text-slate-700 cursor-pointer'>
+                                    <div className='flex px-6 space-x-5  items-center dark:text-slate-50 text-slate-700 cursor-pointer'>
                                         <Collapsible>
                                             <CollapsibleTrigger>
                                                 <div onClick={() => setDownArrow(!downArrow)} className={downArrow ? 'flex items-center space-x-20' : 'flex items-center space-x-3'}>
@@ -154,7 +164,7 @@ export default function Sidebar({showSideBar,setShowSideBar}) {
 
                                             </CollapsibleTrigger>
                                             <CollapsibleContent>
-                                                <div className='dark:bg-slate-900  bg-slate-200   rounded-md flex flex-col space-y-1'>
+                                                <div className='dark:bg-slate-900  bg-slate-200   rounded-md flex flex-col space-y-1 mt-3'>
                                                     {
                                                         item.submenulist.map((subitem, subindex) => {
                                                             const Menuicon = subitem.icon
