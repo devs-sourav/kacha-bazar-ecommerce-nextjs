@@ -105,7 +105,6 @@ export default function Sidebar({showSideBar,setShowSideBar}) {
             href:"/dashboard/onlinestore"
         },
     ]
-    console.log(showSideBar)
 
 
     return (

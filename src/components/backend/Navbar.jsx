@@ -22,7 +22,7 @@ export default function Navbar({setShowSideBar,showSideBar}) {
         <button onClick={()=>setShowSideBar(!showSideBar)} className='lg:pl-64  '><AlignJustify   className='text-green-600'/>
         
         </button>
-        <Link className='sm:hidden' onClick={()=>setShowSideBar(false)} href='/dashboard'><Image className='w-24' src="/logo-light.png" width={100} height={100}/></Link>
+        <Link className='sm:hidden' onClick={()=>setShowSideBar(false)} href='/dashboard'><Image className='w-24'  src="/logo-light.png" alt='logo-light' width={100} height={100}/></Link>
         <div className="flex space-x-3 relative">
             {/* <button><Sun className='text-green-600 '/>
             </button> */}
