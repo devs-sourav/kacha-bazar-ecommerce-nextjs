@@ -1,5 +1,6 @@
 'use client'
 import ImageInput from '@/components/FormInputs/ImageInput'
+import SelectInput from '@/components/FormInputs/SelectInput'
 import SubmitButton from '@/components/FormInputs/SubmitButton'
 import TextareaInput from '@/components/FormInputs/TextAreaInput'
 import TextInput from '@/components/FormInputs/TextInput'
@@ -14,6 +15,20 @@ export default function NewCategory() {
 
   const [imageUrl,setImageUrl] =useState("")
   const [loading,setLoading] =useState(false)
+  const markets = [
+    {
+      id: 1,
+      title:"Hablu Farmer Market",
+    },
+    {
+      id: 2,
+      title:"Kalu Farmer Market",
+    },
+    {
+      id: 3,
+      title:"Heri Farmer Market",
+    },
+  ]
   const {register,reset,handleSubmit,formState:{errors}} = useForm()
 
   async function onSubmit(data){
@@ -48,6 +63,16 @@ export default function NewCategory() {
           name="title"
           register={register}
           errors={errors}
+          className='w-full'
+          />
+          <SelectInput
+          label="Sales Market"
+          name="marketIds"
+          register={register}
+          errors={errors}
+          options={markets}
+          multiple = {false}
+          className='w-full'
           />
           <TextareaInput
             label="Category Description"

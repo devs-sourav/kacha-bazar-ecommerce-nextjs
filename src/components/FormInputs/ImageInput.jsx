@@ -37,10 +37,10 @@ export default function ImageInput({
           alt="Item image"
           width={1000}
           height={667}
-          className="w-full h-64 object-contain"
+          className="w-full h-64 object-contain "
         />
       ) : (
-        <UploadDropzone
+        <UploadDropzone className="dark:border-slate-300"
           endpoint={endpoint}
           onClientUploadComplete={(res) => {
             setImageUrl(res[0].url);
